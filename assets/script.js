@@ -52,12 +52,7 @@ const slides = [
     
 
     // Étape 3 : Ajout des points à la bannière pour chaque diapositive.
-    const dotsContainer = document.createElement("div");
-    dotsContainer.classList.add("dots");
-    banner.appendChild(dotsContainer);
-    
-
-    for (let i = 0; i < slides.length; i++) {
+        for (let i = 0; i < slides.length; i++) {
         const dot = document.createElement("div");
         dot.classList.add("dot");
         dotsContainer.appendChild(dot);
