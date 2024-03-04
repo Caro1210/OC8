@@ -52,16 +52,14 @@ const slides = [
     
 
     // Étape 3 : Ajout des points à la bannière pour chaque diapositive.
-    const dotsContainer = document.createElement("div");
-    dotsContainer.classList.add("dots");
-    banner.appendChild(dotsContainer);
-    
+    const dotsContainer = document.querySelector(".dots");
 
     for (let i = 0; i < slides.length; i++) {
-        const dot = document.createElement("div");
-        dot.classList.add("dot");
-        dotsContainer.appendChild(dot);
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    dotsContainer.appendChild(dot);
     }
+
 
     // Étape 4 : Création de la fonction updateSlide pour mettre à jour la diapositive affichée en fonction de l'index donné.
     function updateSlide(index) {
