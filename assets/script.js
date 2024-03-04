@@ -90,6 +90,15 @@ const slides = [
         dot.classList.toggle("dot_selected", i === index);
         });
 
+        // Bonus : Ajout d'un gestionnaire d'événements à chaque bullet ^_^
+        dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+       
+        // Mise à jour du slide en fonction de l'index du bullet
+        updateSlide(index);
+    });
+});
+
     }
 
     // Appelle de la fonction pour afficher la première diapositive lors du chargement initial.
@@ -100,6 +109,6 @@ const slides = [
     // Défilement automatique du carrousel
     setInterval(function() {
 	    updateSlide(currentSlideIndex + 1);
-        }, 7000); 
+        }, 9000); 
 
 });
